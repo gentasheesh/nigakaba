@@ -467,7 +467,7 @@ if (!isMainThread) {
       return;
     }
 
-
+    console.clear();
     console.log('VALIDATION STATISTICS:');
     console.log(`✓ Valid Validations: ${userData.stats.stork_signed_prices_valid_count || 0}`);
     console.log(`✗ Invalid Validations: ${userData.stats.stork_signed_prices_invalid_count || 0}`);
@@ -483,7 +483,6 @@ if (!isMainThread) {
       process.exit(1);
     }
     
-    log(`processing ${accounts[jobs].username}`);
     const tokenManager = new TokenManager(jobs);
     jobs++;
 
